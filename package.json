@@ -1,0 +1,26 @@
+{
+  "name": "beatsbank",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Challenger Bank Example",
+  "main": "index.js",
+  "author": "Rory Beattie",
+  "proxy": "http://localhost:8080",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-scripts": "^1.1.4",
+    "stripe": "^6.0.0",
+    "styled-components": "^3.2.6",
+    "webpack": "^3.11.0"
+  },
+  "scripts": {
+    "bank": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
