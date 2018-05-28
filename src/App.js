@@ -1,7 +1,18 @@
 import React, {Component} from 'react';
 
-export default class App extends Component {
+import CreateAccount from './components/CreateAccount';
+import TopUp from './components/TopUp';
+
+
+class App extends Component {
     render () {
-        return <p>This is my new react app</p>
-    }
+        return (
+        	<div className="App">
+        		<CreateAccount/>
+        		<TopUp/>
+        	</div>
+    	);
+	}
 }
+
+export default App;
