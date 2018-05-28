@@ -4,7 +4,7 @@ module.exports = function(req, res) {
 
 
 	stripe.charges.create({
-	  amount: 1000,
+	  amount: 1050,
 	  currency: "gbp",
 	  source: "tok_visa",
 	}, {
