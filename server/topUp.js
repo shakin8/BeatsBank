@@ -7,6 +7,7 @@ module.exports = function(req, res) {
 	  amount: 1050,
 	  currency: "gbp",
 	  source: "tok_visa",
+	  statement_descriptor: "Top Up"
 	}, {
 	  stripe_account: req.body.account,
 	}).then(function(charge) {

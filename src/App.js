@@ -4,7 +4,7 @@ import { Flex } from 'grid-styled';
 import CreateAccount from './components/CreateAccount';
 import TopUp from './components/TopUp';
 import GetBalance from './components/GetBalance';
-import Transactions from './components/Transactions';
+import Transactions from './components/GetCharges';
 import siteLogo from './logo.png';
 
 const Logo = styled.img`

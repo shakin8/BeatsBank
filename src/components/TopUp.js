@@ -49,7 +49,9 @@ export default class extends Component {
 
 					</Form>
 				</Flex>
-<p> {this.state.topup} </p>
+				
+				<p> {this.state.topup} </p>
+		
 			</Tile>
 		)
 	}
