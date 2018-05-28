@@ -9,6 +9,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 // DONE
 app.post('/createAccount', require('./server/createAccount'));
 app.post('/topUp', require('./server/topUp'));
+app.post('/getBalance', require('./server/getBalance'));
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));

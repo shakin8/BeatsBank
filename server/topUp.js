@@ -8,9 +8,12 @@ module.exports = function(req, res) {
 	  currency: "gbp",
 	  source: "tok_visa",
 	}, {
-	  stripe_account: "acct_1CWh15FDf4PXHgMT",
+	  stripe_account: req.body.account,
 	}).then(function(charge) {
-	  // asynchronously called
+    	console.log("Successfully topped up acct");
+        // asynchronously called
+
+        return res.send("Topped Up Successfully");
 	});
 
 

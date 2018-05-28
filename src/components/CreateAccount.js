@@ -26,9 +26,9 @@ export default class extends Component {
 
 	render() {
 		return (
-			<Tile wrap>
+			<Tile wrap width={1}>
 				<h1> Create Account</h1>
-				<Flex width={1}>
+				<Flex width={1} justify='center'>
 					<form onSubmit={this.submitForm}>
 
 						<label> Email </label>

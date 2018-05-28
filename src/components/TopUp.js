@@ -21,26 +21,26 @@ export default class extends Component {
 		e.preventDefault();
 		
 		axios.post('/topUp', this.state)
-		.then((data) => this.setState({...this.state, id: data.data.id}));
+		.then((data) => this.setState({...this.state, topup: data.data}));
 	}
 
 	render() {
 		return (
 			<Tile wrap>
-				<Flex width={1}>
+				<Flex>
 					<h1> Top Up </h1>
 				</Flex>
 
-				<Flex width={1}>
+				<Flex width={1} justify='center'>
 					<form onSubmit={this.submitForm}>
 
 						<p>£10.00</p>
 						<label> Account </label>
-						<Input onChange={(event) => this.setState({...this.state, email: event.target.value})} />
+						<Input onChange={(event) => this.setState({...this.state, account: event.target.value})} />
 
 						<Button type="submit"> Topup </Button>
 
-						<p> {this.state.id} </p>
+						<p> {this.state.topup} </p>
 
 					</form>
 				</Flex>
