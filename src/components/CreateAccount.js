@@ -5,6 +5,7 @@ import axios from 'axios';
 import Input from './utilities/Input';
 import Button from './utilities/Button';
 import Tile from './utilities/Tile';
+import Form from './utilities/Form';
 
 
 export default class extends Component {
@@ -26,20 +27,24 @@ export default class extends Component {
 
 	render() {
 		return (
-			<Tile wrap width={1}>
-				<h1> Create Account</h1>
-				<Flex width={1} justify='center'>
-					<form onSubmit={this.submitForm}>
-
-						<label> Email </label>
-						<Input onChange={(event) => this.setState({...this.state, email: event.target.value})} />
+			<Tile wrap width={1} justify='center'>
+				<Flex>
+					<h4>CREATE ACCOUNT</h4>
+				</Flex>
+				<Flex wrap width={1} justify='center' mb={3}>
+					<Form onSubmit={this.submitForm}>
+						<Input onChange={(event) => this.setState({...this.state, email: event.target.value})} 
+						placeholder="e.g. example@test.com"/>
 
 						<Button type="submit"> Submit </Button>
 
-						<p> {this.state.id} </p>
+					</Form>
 
-					</form>
+					
 				</Flex>
+
+				<a> {this.state.id} </a>
+
 			</Tile>
 		)
 	}

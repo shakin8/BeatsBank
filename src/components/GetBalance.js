@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { Flex } from 'grid-styled';
 import Input from './utilities/Input';
-import Button from './utilities/Button';
 import axios from 'axios';
 
+import Button from './utilities/Button';
 import Tile from './utilities/Tile';
+import Form from './utilities/Form';
+
 
 
 export default class extends Component {
@@ -30,15 +32,34 @@ export default class extends Component {
 
 	render() {
 		return (
-			<Tile wrap>
-                  <Flex width={1}>
-                      <form onSubmit={this.submitForm}>
-						<Input onChange={(event) => this.setState({...this.state, account: event.target.value})} />
-						<Button type="submit"> Topup </Button>
-                      <p> £{this.state.available / 100} available</p>
-                      <p> £{this.state.pending / 100} pending</p>
-					</form>
-                  </Flex>
+			<Tile wrap width={1} justify='center'>
+
+				<Flex wrap justify='center' mb={3}>
+
+					<Flex width={1} justify='center'>
+						<h4> BALANCE </h4>
+					</Flex>
+
+					<Flex width={1/2} justify='center'>
+	                  <a> <strong>£{this.state.available / 100}</strong> <small>available</small></a>
+	                 </Flex>
+
+	                <Flex width={1/2} justify='center'>
+	                  <a> <strong>£{this.state.pending / 100}</strong> <small>pending</small></a>
+					</Flex>
+
+				</Flex>
+
+                <Flex width={1}>
+
+                  	<Form onSubmit={this.submitForm}>
+						<Input onChange={(event) => this.setState({...this.state, account: event.target.value})} 
+						placeholder="Enter account ID"/>
+						<Button type="submit"> Get Balance </Button>
+					</Form>
+
+              	</Flex>
+
 			</Tile>
 		)
 	}

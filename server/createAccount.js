@@ -8,7 +8,7 @@ module.exports = function(req, res) {
         type: "custom"
     }).then(function(acct) {
 
-    	console.log(acct);
+    	console.log("Successfully Created Account: " + acct.id);
         // asynchronously called
 
         return res.send(acct);
