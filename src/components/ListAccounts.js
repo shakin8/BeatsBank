@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import { Flex, Box } from 'grid-styled';
+import { Flex } from 'grid-styled';
 import axios from 'axios';
 
 
 import Button from './utilities/Button';
-import Tile from './utilities/Tile';
 import Form from './utilities/Form';
-import Input from './utilities/Input';
 
 
 export default class extends Component {
