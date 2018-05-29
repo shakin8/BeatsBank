@@ -5,6 +5,7 @@ import CreateAccount from './components/CreateAccount';
 import TopUp from './components/TopUp';
 import GetBalance from './components/GetBalance';
 import Transactions from './components/GetCharges';
+import Accounts from './components/ListAccounts';
 import siteLogo from './logo.png';
 
 const Logo = styled.img`
@@ -26,6 +27,7 @@ class App extends Component {
         			</Header>
 	        		<Flex wrap width={1/4} p={2}>
 		        		<CreateAccount/>
+		        		<Accounts/>
 		        	</Flex>
 		        	<Flex wrap width={1/2} p={2}>
 		        		<Transactions/>
